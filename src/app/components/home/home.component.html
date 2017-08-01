@@ -1,0 +1,5 @@
+<div class="main-container">
+
+  <div *ngIf="!isReady">CARGANDO...</div>
+  <app-run-listing *ngIf="isReady" [games]="allGames"></app-run-listing>
+</div>

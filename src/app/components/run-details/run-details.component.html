@@ -1,0 +1,33 @@
+<div class="details-popup" (click)="closePopUp()">
+  <div *ngIf="!isReady" class="row details-box">
+    CARGANDO...
+  </div>
+  <div *ngIf="user && game && lastRun && isReady" class="row details-box">
+    <div class="col-md-12 text-right">
+      <a href="#" (click)="closePopUp()">X</a>
+    <div class="col-md-12 text-center">
+      <div class="username">
+        <div class="run-game-logo">
+          <img [src]="game.assets['cover-medium'].uri">
+        </div>
+        <div class="run-game-name">
+          {{ game.names.international }}
+        </div>
+        <a *ngIf="user.weblink" [href]="user.weblink" target="_blank">
+          {{ user.names.international }}
+        </a>
+      </div>
+      <div class="run-video-btn">
+        <a [href]="lastRun.videos.links[0].uri||'#'" target="_blank">
+          <button class="default">Ver video</button>
+        </a>
+      </div>
+      <div class="run-date">
+        {{ lastRun.date }}
+      </div>
+    </div>
+  </div>
+  <div *ngIf="(!user || !game || !lastRun) && isReady" class="row details-box">
+    Lo sentimos, ocurrión un error obteniendo la información del juego
+  </div>
+</div>

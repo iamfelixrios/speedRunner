@@ -1,0 +1,11 @@
+<div>
+  <div class="row">
+    <div class="list-item col-md-2 col-sm-4 col-xs-12" *ngFor="let game of games" (click)="selectGame(game)">
+      <img [src]="game.assets['cover-small'].uri"><BR/>
+      {{ game.names.international }}<BR/>
+    </div>
+  </div>
+  <div *ngIf="activeGame">
+    <app-run-details (onClose)="unselectGame()" [game]="activeGame"></app-run-details>
+  </div>
+</div>

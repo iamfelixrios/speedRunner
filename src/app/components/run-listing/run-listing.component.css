@@ -1,0 +1,9 @@
+.list-name {
+  margin-top: 7px;
+  margin-left: 20px;
+}
+.list-item {
+  min-height: 170px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}

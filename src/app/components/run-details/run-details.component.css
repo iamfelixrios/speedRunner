@@ -1,0 +1,21 @@
+.details-box {
+  border-radius: 7px;
+  background:white;
+  border: solid 1px black;
+  margin:30px auto 0;
+  padding:20px 6px 20px 6px;
+  position:absolute;
+  width:400px;
+  top: 50%;
+  left: 50%;
+  margin-left: -200px;
+  margin-top: -150px;
+}
+.details-popup {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  display: block;
+  height: 100%;
+}
